@@ -1,16 +1,19 @@
 
-
+/* Variables de apoyo */
 :root {
-    --w: calc(90vw / 9);
-    --h: calc(70vh / 2);
+    --ancho: calc(90vw / 9);
+    --alto: calc(70vh / 2);
 }
 
+/* Todo el contenido de la página se encontrará centrado */
 * {
     transition: all 0.5s;
     justify-content: center;
     align-items: center;
 }
 
+/* Se selecciona el color del fondo, la manera en la que se posicionarán los
+elementos y el color de la fuente  */
 body {
     background: linear-gradient(olive,  #5c810b);
     min-height: 100vh;
@@ -23,34 +26,43 @@ body {
     color: white;
 }        
 
+/* Se acomodará una tarjeta luego de la otra, por filas */
 div {
     display: inline-block;
 }
 
+/* El contenido de las cartas se ajusta de acuerdo al valor de 
+las variables definidas arriba */
 .area-tarjeta,
 .tarjeta,
 .cara, 
 img{
     cursor: pointer;
-    width: var(--w);
-    height: var(--h);
+    width: var(--ancho);
+    height: var(--alto);
 }
 
+/* Se le dan 5 segundos al jugador para que memorice la
+mayor cantidad de parejas de cartas */
 .tarjeta {
     transform-style: preserve-3d;
     animation: presentacion 5s;
 }
 
+/* La posisción de las cartas es clave para poder ver el reverso
+y el frente de la misma (encimando las dos imágenes) */
 .cara {
     position: absolute;
     display: flex;
 }        
 
+/* Permite ver el reverso de la carta */
 .trasera {
     transform: rotateY(180deg);
 }
 
-.nuevo-juego {
+/* Se le da formato al botón que revuelve las cartas de manera aleatoria */
+.boton {
     cursor: pointer;
     background: linear-gradient(brown, rgb(146, 39, 39));
     padding: 20px;
@@ -59,6 +71,8 @@ img{
     font-size: 130%;
 }
 
+/* Es una animación que dura 5 seg y le permite al jugador 
+memorizar la mayor cantidad de parejas de cartas posible */
 @keyframes presentacion {
 
     10%,
