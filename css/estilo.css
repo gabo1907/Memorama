@@ -1,0 +1,73 @@
+
+
+:root {
+    --w: calc(90vw / 9);
+    --h: calc(70vh / 2);
+}
+
+* {
+    transition: all 0.5s;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(olive,  #5c810b);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}        
+
+div {
+    display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara, 
+img{
+    cursor: pointer;
+    width: var(--w);
+    height: var(--h);
+}
+
+.tarjeta {
+    transform-style: preserve-3d;
+    animation: presentacion 5s;
+}
+
+.cara {
+    position: absolute;
+    display: flex;
+}        
+
+.trasera {
+    transform: rotateY(180deg);
+}
+
+.nuevo-juego {
+    cursor: pointer;
+    background: linear-gradient(brown, rgb(146, 39, 39));
+    padding: 20px;
+    border-radius: 50px;
+    border: white 5px solid;
+    font-size: 130%;
+}
+
+@keyframes presentacion {
+
+    10%,
+    90% {
+        transform: rotateY(180deg);
+    }
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+}

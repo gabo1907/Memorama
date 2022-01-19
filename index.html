@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Memorama PROYECTIL</title>
+    <!-- Se vinvula tanto la hoja de estilos como el ícono de la página -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shorcut icon" href="img/icono.png">
+</head>
+
+<body>
+    <!-- Se le da un mensaje de bienvenida al jugador y, con ayuda de 
+    los id's, se forma el tablero de juego -->
+    <h1>¡Bienvenido al juego del memorama!</h1>
+    <div id="tablero">
+    </div>
+
+    <br>
+
+    <!-- Una vez que se haga clic cobre el botón de "Revolver cartas", 
+    las cartas de revolveran de manera aleatoria -->
+    <div class="nuevo-juego" onclick="generarTablero()">
+        Revolver cartas
+    </div>
+
+</body>
+    <!-- Se vincula el sript con la mecánica del juego -->
+    <script src="js/funcionamiento.js"></script>
+</html>
